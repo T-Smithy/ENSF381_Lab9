@@ -39,7 +39,7 @@ def search_product(products, name):
     for product in products:
     # complete the for loop ,
     # it must pretty print the product details with 4 indents
-        #https://www.digitalocean.com/community/tutorials/python-pretty-print-json
+        #Source for info on pretty print: https://www.digitalocean.com/community/tutorials/python-pretty-print-json
         if product['title']== name:
             formatted_product = json.dumps(product, indent=4)
             print(formatted_product, "\n")
