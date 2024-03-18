@@ -14,11 +14,11 @@ def fetch_product_data (url):
     try:
         response = requests.get(url)
         # Raises an error for bad responses
-        response.raise_for_status ()
-        # The JSON structure includes a ' products ' key
-        return response . json () [ ' products ']
+        response.raise_for_status()
+        # The JSON structure includes a 'products' key
+        return response.json() ['products']
     except requests.exceptions.RequestException as e:
-        print(f"Error fetching data: { e }")
+        print(f"Error fetching data: {e}")
         return None
 
 def list_all_products(products):
@@ -40,12 +40,12 @@ def main():
         while True:
             choice = input("Choose an option:\n 1.List all products\n 2.Search for a product\n 3.Exit\n>")
             if choice == '1 ':
-            # complete the code .
-            # call suitable function ( s )
+                # complete the code .
+                list_all_products(products)
             elif choice == '2 ':
                 product_name = input (" Enter the product name : ")
                 # complete the code .
-                 # call suitable function ( s )
+                search_product(products, product_name)
             elif choice == '3 ':
                  break
             else:
