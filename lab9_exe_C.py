@@ -44,11 +44,11 @@ def main():
             # call suitable function ( s )
             elif choice == '2 ':
                 product_name = input (" Enter the product name : ")
-13              # complete the code .
-14              # call suitable function ( s )
-15          elif choice == '3 ':
-16              break
-17           else :
-18              print (" Invalid choice . Please try again .")
-19   else :
-20      print (" Failed to fetch product data .")
+                # complete the code .
+                 # call suitable function ( s )
+            elif choice == '3 ':
+                 break
+            else:
+                 print (" Invalid choice . Please try again .")
+    else:
+         print (" Failed to fetch product data .")
