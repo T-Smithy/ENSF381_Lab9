@@ -16,13 +16,14 @@ def fetch_product_data (url):
         # Raises an error for bad responses
         response.raise_for_status()
         # The JSON structure includes a 'products' key
-        return response.json() ['products']
+        return response.json()['products']
     except requests.exceptions.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
 
 def list_all_products(products):
-# complete this function
+    for product in products:
+        print(product['title'])
     return
     
 def search_product(products, name):
@@ -39,19 +40,19 @@ def main():
     if products:
         while True:
             choice = input("Choose an option:\n 1.List all products\n 2.Search for a product\n 3.Exit\n>")
-            if choice == '1 ':
+            if choice == '1':
                 # complete the code .
                 list_all_products(products)
-            elif choice == '2 ':
-                product_name = input (" Enter the product name : ")
+            elif choice == '2':
+                product_name = input ("Enter the product name: ")
                 # complete the code .
                 search_product(products, product_name)
-            elif choice == '3 ':
+            elif choice == '3':
                  break
             else:
-                 print (" Invalid choice . Please try again .")
+                 print("Invalid choice. Please try again.")
     else:
-         print (" Failed to fetch product data .")
+         print("Failed to fetch product data.")
 
-if __name__ == " __main__ ":
-    main ()
+if __name__ == "__main__":
+    main()
