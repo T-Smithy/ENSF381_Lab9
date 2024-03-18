@@ -52,3 +52,6 @@ def main():
                  print (" Invalid choice . Please try again .")
     else:
          print (" Failed to fetch product data .")
+
+if __name__ == " __main__ ":
+    main ()
