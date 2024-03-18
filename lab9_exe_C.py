@@ -22,16 +22,38 @@ def fetch_product_data (url):
         return None
 
 def list_all_products(products):
+    print("\nProduct List:\n")
     for product in products:
-        print(product['title'])
+        print("     ", product['title'])
+    print("\n")
     return
+
+'''
+This function utilizes a for loop in order to iterate over all of the entires in the JSON file, 
+and using the key value of 'title' each of the items name are printed. we also added \n in order to aid
+with the spacing when the items are being printed out 
+'''
     
 def search_product(products, name):
+    print()
     for product in products:
     # complete the for loop ,
     # it must pretty print the product details with 4 indents
-        print("Product not found.")
+        #https://www.digitalocean.com/community/tutorials/python-pretty-print-json
+        if product['title']== name:
+            formatted_product = json.dumps(product, indent=4)
+            print(formatted_product, "\n")
+            return
+    print("Product not found.\n")
     return
+
+'''
+this functions utilizes the key in order to retrun all of the attributes 
+associated with it, calling all of them instead of having a singular call 
+for each of teh attributes. It iterates over each of the entires in the JSON file
+using a for loop, coparing these values to the name of the product being searched
+the loops end at the last product and if there is no match it prints item not fount
+'''
 
 def main():
     products_url = 'https://dummyjson.com/products'
