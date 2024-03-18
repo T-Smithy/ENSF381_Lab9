@@ -21,4 +21,34 @@ def fetch_product_data (url):
         print(f"Error fetching data: { e }")
         return None
 
+def list_all_products(products):
+# complete this function
+    return
+    
+def search_product(products, name):
+    for product in products:
+    # complete the for loop ,
+    # it must pretty print the product details with 4 indents
+        print("Product not found.")
+    return
 
+def main():
+    products_url = 'https://dummyjson.com/products'
+    products = fetch_product_data(products_url)
+
+    if products:
+        while True:
+            choice = input("Choose an option:\n 1.List all products\n 2.Search for a product\n 3.Exit\n>")
+            if choice == '1 ':
+            # complete the code .
+            # call suitable function ( s )
+            elif choice == '2 ':
+                product_name = input (" Enter the product name : ")
+13              # complete the code .
+14              # call suitable function ( s )
+15          elif choice == '3 ':
+16              break
+17           else :
+18              print (" Invalid choice . Please try again .")
+19   else :
+20      print (" Failed to fetch product data .")
